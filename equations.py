@@ -75,4 +75,4 @@ def generate_dataset(n=10000, filename="factored_equations.txt"):
 # -----------------------------
 
 if __name__ == "__main__":
-    generate_dataset(5000)
+    generate_dataset(7000)
