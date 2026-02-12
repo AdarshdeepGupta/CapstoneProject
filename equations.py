@@ -1,7 +1,8 @@
 import random
-from sympy import symbols, latex, Eq
+from sympy import symbols, latex, Eq , log , sqrt , StrictGreaterThan, StrictLessThan, GreaterThan, LessThan , Function , Piecewise, Ge, Lt
 
 x = symbols('x')
+f = Function('f')
 
 # -----------------------------
 # Expression generators
@@ -35,9 +36,12 @@ def power():
     return (x + a)**n
 
 def rational():
-    num = polynomial()
-    den = x + random.randint(1, 5)
-    return num / den
+    a = random.randint(-20, 20)
+    b = random.randint(-20, 20)
+    c = random.randint(1, 20)
+    d = random.randint(-20, 20)
+    return (a*x + b)/(c*x + d)
+
 
 def nested():
     a = random.randint(1, 4)
@@ -47,28 +51,22 @@ def nested():
 
 
 
-def Radical_equation():
-    # choose coefficient (non-zero)
-    a = random.choice([i for i in range(-50, 51) if i != 0])
-    
-    # choose a solution
-    x0 = random.randint(-20, 20)
-    
-    # choose non-negative RHS
-    c = random.randint(0, 20)
-    
-    # compute b to guarantee solvability
-    b = c**2 - a * x0
-    
-    return Eq((a*x + b)**0.5, c)
+def Piecewise_function():
+    a = random.randint(-10, 10)
+    b = random.randint(-20, 20)
+    c = random.randint(-10, 10)
+    d = random.randint(-20, 20)
 
+    return a, b, c, d
+
+   
 
 # -----------------------------
 # Expression chooser
 # -----------------------------
 
 GENERATORS = [
-    Radical_equation
+     Piecewise_function
 ]
 
 def generate_expression():
@@ -79,14 +77,15 @@ def generate_expression():
 # Dataset writer
 # -----------------------------
 
-def generate_dataset(n=10000, filename="Radical_equations.txt"):
-    with open(filename, "w", encoding="utf-8") as f:
+def generate_dataset(n=10000, filename="Piecewise_functions.txt"):
+    with open(filename, "w", encoding="utf-8") as f_out:
         for _ in range(n):
-            expr = generate_expression()
-            #expr_latex = latex(expr)
-            f.write(f"{expr.lhs} = {expr.rhs}\n") 
+            a, b, c, d = generate_expression()
 
-    print(f"Saved {n} expressions to {filename}")
+            line = f"f(x) = {{ {a}x + {b} , x >= 0 ; {c}x + {d} , x < 0 }}"
+            f_out.write(line + "\n")
+
+    print(f"Saved {n} piecewise functions to {filename}")
 
 # -----------------------------
 # Run
