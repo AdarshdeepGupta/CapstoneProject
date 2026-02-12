@@ -45,12 +45,30 @@ def nested():
     c = random.randint(-5, 5)
     return a * (x + b)**2 - (x + c)
 
+
+
+def Radical_equation():
+    # choose coefficient (non-zero)
+    a = random.choice([i for i in range(-50, 51) if i != 0])
+    
+    # choose a solution
+    x0 = random.randint(-20, 20)
+    
+    # choose non-negative RHS
+    c = random.randint(0, 20)
+    
+    # compute b to guarantee solvability
+    b = c**2 - a * x0
+    
+    return Eq((a*x + b)**0.5, c)
+
+
 # -----------------------------
 # Expression chooser
 # -----------------------------
 
 GENERATORS = [
-    factored
+    Radical_equation
 ]
 
 def generate_expression():
@@ -61,12 +79,12 @@ def generate_expression():
 # Dataset writer
 # -----------------------------
 
-def generate_dataset(n=10000, filename="factored_equations.txt"):
+def generate_dataset(n=10000, filename="Radical_equations.txt"):
     with open(filename, "w", encoding="utf-8") as f:
         for _ in range(n):
             expr = generate_expression()
             #expr_latex = latex(expr)
-            f.write(str(expr) + "\n") 
+            f.write(f"{expr.lhs} = {expr.rhs}\n") 
 
     print(f"Saved {n} expressions to {filename}")
 
@@ -75,4 +93,4 @@ def generate_dataset(n=10000, filename="factored_equations.txt"):
 # -----------------------------
 
 if __name__ == "__main__":
-    generate_dataset(7000)
+    generate_dataset(8000)
