@@ -1,0 +1,750 @@
+{
+  "source_file": "sample_equations.txt",
+  "count": 16,
+  "equations": [
+    {
+      "id": 1,
+      "raw": "405 - 232 x = 356",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "linear",
+      "relation": "=",
+      "lhs": {
+        "type": "sum",
+        "terms": [
+          {
+            "type": "constant",
+            "value": 405
+          },
+          {
+            "type": "product",
+            "factors": [
+              {
+                "type": "constant",
+                "value": -232
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      },
+      "rhs": {
+        "type": "constant",
+        "value": 356
+      }
+    },
+    {
+      "id": 2,
+      "raw": "491 x - 440 = -274",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "linear",
+      "relation": "=",
+      "lhs": {
+        "type": "sum",
+        "terms": [
+          {
+            "type": "constant",
+            "value": -440
+          },
+          {
+            "type": "product",
+            "factors": [
+              {
+                "type": "constant",
+                "value": 491
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      },
+      "rhs": {
+        "type": "constant",
+        "value": -274
+      }
+    },
+    {
+      "id": 3,
+      "raw": "-8x\u00b2 + 112x - 192 = 0",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "quadratic",
+      "relation": "=",
+      "lhs": {
+        "type": "sum",
+        "terms": [
+          {
+            "type": "constant",
+            "value": -192
+          },
+          {
+            "type": "product",
+            "factors": [
+              {
+                "type": "constant",
+                "value": -8
+              },
+              {
+                "type": "power",
+                "base": {
+                  "type": "variable",
+                  "name": "x"
+                },
+                "exponent": {
+                  "type": "constant",
+                  "value": 2
+                }
+              }
+            ]
+          },
+          {
+            "type": "product",
+            "factors": [
+              {
+                "type": "constant",
+                "value": 112
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      },
+      "rhs": {
+        "type": "constant",
+        "value": 0
+      }
+    },
+    {
+      "id": 4,
+      "raw": "(1x + 59)/(2x + 10) = 5",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "rational",
+      "relation": "=",
+      "lhs": {
+        "type": "product",
+        "factors": [
+          {
+            "type": "power",
+            "base": {
+              "type": "sum",
+              "terms": [
+                {
+                  "type": "constant",
+                  "value": 10
+                },
+                {
+                  "type": "product",
+                  "factors": [
+                    {
+                      "type": "constant",
+                      "value": 2
+                    },
+                    {
+                      "type": "variable",
+                      "name": "x"
+                    }
+                  ]
+                }
+              ]
+            },
+            "exponent": {
+              "type": "constant",
+              "value": -1
+            }
+          },
+          {
+            "type": "sum",
+            "terms": [
+              {
+                "type": "constant",
+                "value": 59
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      },
+      "rhs": {
+        "type": "constant",
+        "value": 5
+      }
+    },
+    {
+      "id": 5,
+      "raw": "(x + 19)**5 = 1048576",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "polynomial",
+      "relation": "=",
+      "lhs": {
+        "type": "power",
+        "base": {
+          "type": "sum",
+          "terms": [
+            {
+              "type": "constant",
+              "value": 19
+            },
+            {
+              "type": "variable",
+              "name": "x"
+            }
+          ]
+        },
+        "exponent": {
+          "type": "constant",
+          "value": 5
+        }
+      },
+      "rhs": {
+        "type": "constant",
+        "value": 1048576
+      }
+    },
+    {
+      "id": 6,
+      "raw": "(29*x + 515)**0.5 = 14",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "radical",
+      "relation": "=",
+      "lhs": {
+        "type": "power",
+        "base": {
+          "type": "sum",
+          "terms": [
+            {
+              "type": "constant",
+              "value": 515
+            },
+            {
+              "type": "product",
+              "factors": [
+                {
+                  "type": "constant",
+                  "value": 29
+                },
+                {
+                  "type": "variable",
+                  "name": "x"
+                }
+              ]
+            }
+          ]
+        },
+        "exponent": {
+          "type": "constant",
+          "value": 0.5
+        }
+      },
+      "rhs": {
+        "type": "constant",
+        "value": 14
+      }
+    },
+    {
+      "id": 7,
+      "raw": "33x + 11 > -5",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "inequality_linear",
+      "relation": ">",
+      "lhs": {
+        "type": "sum",
+        "terms": [
+          {
+            "type": "constant",
+            "value": 11
+          },
+          {
+            "type": "product",
+            "factors": [
+              {
+                "type": "constant",
+                "value": 33
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      },
+      "rhs": {
+        "type": "constant",
+        "value": -5
+      }
+    },
+    {
+      "id": 8,
+      "raw": "15x + 78 \u2264 175",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "inequality_linear",
+      "relation": "<=",
+      "lhs": {
+        "type": "sum",
+        "terms": [
+          {
+            "type": "constant",
+            "value": 78
+          },
+          {
+            "type": "product",
+            "factors": [
+              {
+                "type": "constant",
+                "value": 15
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      },
+      "rhs": {
+        "type": "constant",
+        "value": 175
+      }
+    },
+    {
+      "id": 9,
+      "raw": "4**x = 0.25",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "exponential",
+      "relation": "=",
+      "lhs": {
+        "type": "power",
+        "base": {
+          "type": "constant",
+          "value": 4
+        },
+        "exponent": {
+          "type": "variable",
+          "name": "x"
+        }
+      },
+      "rhs": {
+        "type": "constant",
+        "value": 0.25
+      }
+    },
+    {
+      "id": 10,
+      "raw": "|-9x + 115| = 2",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "absolute",
+      "relation": "=",
+      "lhs": {
+        "type": "absolute_value",
+        "operand": {
+          "type": "sum",
+          "terms": [
+            {
+              "type": "constant",
+              "value": -115
+            },
+            {
+              "type": "product",
+              "factors": [
+                {
+                  "type": "constant",
+                  "value": 9
+                },
+                {
+                  "type": "variable",
+                  "name": "x"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "rhs": {
+        "type": "constant",
+        "value": 2
+      }
+    },
+    {
+      "id": 11,
+      "raw": "log(17*x + 9847)/log(10) = 4",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "other",
+      "relation": "=",
+      "lhs": {
+        "type": "product",
+        "factors": [
+          {
+            "type": "power",
+            "base": {
+              "type": "function_call",
+              "name": "log",
+              "arguments": [
+                {
+                  "type": "constant",
+                  "value": 10
+                }
+              ]
+            },
+            "exponent": {
+              "type": "constant",
+              "value": -1
+            }
+          },
+          {
+            "type": "function_call",
+            "name": "log",
+            "arguments": [
+              {
+                "type": "sum",
+                "terms": [
+                  {
+                    "type": "constant",
+                    "value": 9847
+                  },
+                  {
+                    "type": "product",
+                    "factors": [
+                      {
+                        "type": "constant",
+                        "value": 17
+                      },
+                      {
+                        "type": "variable",
+                        "name": "x"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "rhs": {
+        "type": "constant",
+        "value": 4
+      }
+    },
+    {
+      "id": 12,
+      "raw": "(x - 13) (x - 17) = 28",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "quadratic",
+      "relation": "=",
+      "lhs": {
+        "type": "product",
+        "factors": [
+          {
+            "type": "sum",
+            "terms": [
+              {
+                "type": "constant",
+                "value": -17
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          },
+          {
+            "type": "sum",
+            "terms": [
+              {
+                "type": "constant",
+                "value": -13
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      },
+      "rhs": {
+        "type": "constant",
+        "value": 28
+      }
+    },
+    {
+      "id": 13,
+      "raw": "f(x) = { 9x + 10 , x >= 0 ; 6x + -14 , x < 0 }",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "piecewise",
+      "relation": "=",
+      "lhs": {
+        "type": "function_def",
+        "name": "f",
+        "variable": "x"
+      },
+      "rhs": {
+        "type": "piecewise",
+        "branches": [
+          {
+            "condition": {
+              "type": "relational",
+              "relation": "=",
+              "lhs": {
+                "type": "variable",
+                "name": "x"
+              },
+              "rhs": {
+                "type": "constant",
+                "value": 0
+              }
+            },
+            "expression": {
+              "type": "sum",
+              "terms": [
+                {
+                  "type": "constant",
+                  "value": 10
+                },
+                {
+                  "type": "product",
+                  "factors": [
+                    {
+                      "type": "constant",
+                      "value": 9
+                    },
+                    {
+                      "type": "variable",
+                      "name": "x"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "condition": {
+              "type": "relational",
+              "relation": "=",
+              "lhs": {
+                "type": "variable",
+                "name": "x"
+              },
+              "rhs": {
+                "type": "constant",
+                "value": 0
+              }
+            },
+            "expression": {
+              "type": "sum",
+              "terms": [
+                {
+                  "type": "constant",
+                  "value": -14
+                },
+                {
+                  "type": "product",
+                  "factors": [
+                    {
+                      "type": "constant",
+                      "value": 6
+                    },
+                    {
+                      "type": "variable",
+                      "name": "x"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "raw": "(x - 3)^2 = x^2 - 6x + 25",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "linear",
+      "relation": "=",
+      "lhs": {
+        "type": "power",
+        "base": {
+          "type": "sum",
+          "terms": [
+            {
+              "type": "constant",
+              "value": -3
+            },
+            {
+              "type": "variable",
+              "name": "x"
+            }
+          ]
+        },
+        "exponent": {
+          "type": "constant",
+          "value": 2
+        }
+      },
+      "rhs": {
+        "type": "sum",
+        "terms": [
+          {
+            "type": "constant",
+            "value": 25
+          },
+          {
+            "type": "power",
+            "base": {
+              "type": "variable",
+              "name": "x"
+            },
+            "exponent": {
+              "type": "constant",
+              "value": 2
+            }
+          },
+          {
+            "type": "product",
+            "factors": [
+              {
+                "type": "constant",
+                "value": -6
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "raw": "-19x - 25 = 16y",
+      "variables": [
+        "x",
+        "y"
+      ],
+      "equation_type": "linear",
+      "relation": "=",
+      "lhs": {
+        "type": "sum",
+        "terms": [
+          {
+            "type": "constant",
+            "value": -25
+          },
+          {
+            "type": "product",
+            "factors": [
+              {
+                "type": "constant",
+                "value": -19
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      },
+      "rhs": {
+        "type": "product",
+        "factors": [
+          {
+            "type": "constant",
+            "value": 16
+          },
+          {
+            "type": "variable",
+            "name": "y"
+          }
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "raw": "f(x + 4) = f(x) - 28",
+      "variables": [
+        "x"
+      ],
+      "equation_type": "functional",
+      "relation": "=",
+      "lhs": {
+        "type": "function_call",
+        "name": "f",
+        "arguments": [
+          {
+            "type": "sum",
+            "terms": [
+              {
+                "type": "constant",
+                "value": 4
+              },
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      },
+      "rhs": {
+        "type": "sum",
+        "terms": [
+          {
+            "type": "constant",
+            "value": -28
+          },
+          {
+            "type": "function_call",
+            "name": "f",
+            "arguments": [
+              {
+                "type": "variable",
+                "name": "x"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
